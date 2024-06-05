@@ -177,7 +177,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .forecast {
-    width: 70%; /* Make the cards take most of the screen width */
+    width: 70%; /* Increase if dosent fit screen*/
     font-size: 0.7rem;
   }
 }
