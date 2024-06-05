@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="background-video">
+      <source src="Videos/ClearLowquality.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="burger-menu">
+      <button id="menu-button">☰</button>
+      <div id="menu-content" class="menu-content">
+        <input type="text" id="city-search" placeholder="Enter city name" />
+        <button id="search-button">Search</button>
+        <div id="search-history" class="search-history"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="current-weather">
+        <div id="location">City Name</div>
+        <div id="current-weather">Weather Description, temperature</div>
+      </div>
+      <div class="weather-details">
+        <div class="detail" id="humidity">
+          <img
+            src="Symbols/humidity-svgrepo-com.svg"
+            alt="Humidity Icon"
+            class="detail-icon"
+          />
+          <span>Humidity: <span id="humidity-value">--</span>%</span>
+        </div>
+        <div class="detail" id="wind-speed">
+          <img
+            src="Symbols/wind-svgrepo-com.svg"
+            alt="Wind Speed Icon"
+            class="detail-icon"
+          />
+          <span>Wind Speed: <span id="wind-speed-value">--</span> m/s</span>
+        </div>
+        <div class="detail" id="wind-direction">
+          <img
+            src="Symbols/wind-strength-svgrepo-com.svg"
+            alt="Wind Direction Icon"
+            class="detail-icon"
+          />
+          <span
+            >Wind Direction: <span id="wind-direction-value">--</span>°</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="forecast" id="forecast">
+      <div class="day">Day 1</div>
+      <div class="day">Day 2</div>
+      <div class="day">Day 3</div>
+      <div class="day">Day 4</div>
+    </div>
+    <button id="get-location">Use My Location</button>
+    <script src="script2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWn3pzCohw0qjVRny1n3dRLNSsPckgED8&libraries=places"></script>
+    <script src="autocomplete.js"></script>
+  </body>
+</html>
